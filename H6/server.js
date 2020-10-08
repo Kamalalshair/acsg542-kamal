@@ -1,13 +1,14 @@
 var fs = require('fs');
 var http = require('http');
 var url = require('url');
-var mongo = require('mongodb');
+var mongoose = require('mongoose');
+var schema = require('./schema_file.js');
+
 var ROOT_DIR = "../H5";
+var dbUrl = "mongodb://localhost/mydb";
+var db = mongoose.connect(dbUrl);
 
-var dbUrl = "mongodb://localhost:27017/";
-
-mongo.MongoClient.connect(dbUrl, {useUnifiedTopology: true},function (err, db) {
-    if (err) throw err;
+mongoose.connection.once('open', {useUnifiedTopology: true},function () {
     http.createServer(function (req, res) {
         if (req.method === "POST") {
             var jsonData = "";

@@ -1,0 +1,20 @@
+{
+  "name": "h5",
+  "version": "0.0.1",
+  "main": "services.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.8",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "kamal",
+  "license": "ISC",
+  "description": "second main assignment"
+}

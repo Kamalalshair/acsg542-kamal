@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd00a1a7-efdd-43d6-a432-9ee90dbc243a" name="Default Changelist" comment="H6 initial Commit">
-      <change afterPath="$PROJECT_DIR$/schema_file.js" afterDir="false" />
+    <list default="true" id="cd00a1a7-efdd-43d6-a432-9ee90dbc243a" name="Default Changelist" comment="Conversion from raw Mongo to Mongoose">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.64" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../H5" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -75,7 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602122533474</updated>
       <workItem from="1602122534933" duration="1438000" />
-      <workItem from="1602124538466" duration="39000" />
+      <workItem from="1602124538466" duration="273000" />
+      <workItem from="1602459881410" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="H6 initial Commit">
       <created>1602122725614</created>
@@ -84,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602122725614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Conversion from raw Mongo to Mongoose">
+      <created>1602124600519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602124600519</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,16 +110,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="H6 initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="H6 initial Commit" />
+    <MESSAGE value="Conversion from raw Mongo to Mongoose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conversion from raw Mongo to Mongoose" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1602459896855">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602459896855" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1602122659138">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602122659138" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1602122731267">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1602124604674">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602122731267" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602124604674" />
   </component>
 </project>

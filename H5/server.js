@@ -4,7 +4,7 @@ var url = require('url');
 var mongo = require('mongodb');
 var ROOT_DIR = "../H5";
 
-var dbUrl = "mongodb://localhost:27017/";
+var dbUrl = "mongodb://localhost";
 
 mongo.MongoClient.connect(dbUrl, {useUnifiedTopology: true},function (err, db) {
     if (err) throw err;
@@ -17,10 +17,10 @@ mongo.MongoClient.connect(dbUrl, {useUnifiedTopology: true},function (err, db) {
             req.on('end', function () {
                 var reqObj = JSON.parse(jsonData);
                 var myDB = db.db("mydb");
-                myDB.createCollection("data", myDB);
-                myDB.collection("data").insertOne(reqObj, function (err, res){
-                    if (err) throw err;
-                    console.log("Successful Insertion of: " + reqObj);
+                myDB.collection("todo", function(err, todo){
+                    todo.save(reqObj, function(err, results){
+                        console.log(results);
+                    });
                 });
                 console.log(reqObj);
                 res.writeHead(200);
@@ -36,8 +36,7 @@ mongo.MongoClient.connect(dbUrl, {useUnifiedTopology: true},function (err, db) {
                 }
                 else {
                     res.writeHead(200);
-                    res.end(JSON.stringify("Success!"));
-                    return;
+                    res.end(data);
                 }
             });
         }

@@ -3,7 +3,6 @@ $('#favoriteFood').submit(function() {
         url: 'index.html',
         data: JSON.stringify({"favFood": $('#inputFood').val()}),
         dataType: 'json',
-        contentType: 'application/json'
     })
 })
 

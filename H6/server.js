@@ -1,48 +1,47 @@
-var fs = require('fs');
-var http = require('http');
-var url = require('url');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
 var schema = require('./schema_file.js').todoSchema;
 
 var ROOT_DIR = "./";
-var dbUrl = "mongodb://localhost/mydb";
-var db = mongoose.connect(dbUrl);
-var Items = mongoose.model("Items", schema);
+var db = mongoose.connect('mongodb://localhost/mydb');
+var Items = mongoose.model('Items', schema);
 
-mongoose.connection.once('open', {useUnifiedTopology: true}, function () {
-    http.createServer(function (req, res) {
-        if (req.method === "POST") {
-            var jsonData = "";
-            req.on('data', function (chunk) {
-                jsonData += chunk;
-            });
-            req.on('end', function () {
-                var reqObj = JSON.parse(jsonData);
-                var newItem = new Items({
-                    item: reqObj
-                });
+mongoose.connection.once('open', function () {
+    app.use(bodyParser.urlencoded({extended: true}));
 
-                newItem.save(function (err, doc) {
-                    console.log(doc);
-                });
+    app.use('/', express.query());
 
-                res.writeHead(200);
-                res.end(JSON.stringify({}));
-            });
-        } else if (req.method === "POST" && req.url === "/list") {
-            var query = Items.find();
-            query.exec(function (err, docs) {
-                res.writeHead(200);
-                res.end(JSON.stringify({docs}));
-            });
-        } else {
-            var urlObj = url.parse(request.url, true, false);
-            fs.readFile(ROOT_DIR + urlObj.pathname, function (err, data) {
-                response.writeHead(200);
-                response.end(data);
-            });
+    app.delete("/", function (request, response) {
+        // Items.remove({_id: request.query.id}).exec()
+        console.log(request.query)
+        Items.deleteOne({_id: request.query.id}).exec()
+    })
 
-        }
-    }).listen(8080);
-    db.close();
-})
+    app.post('*', function (req, res) {
+
+        var reqObj = JSON.parse(req.body);
+        var newItem = new Items({
+            item: reqObj
+        });
+
+        newItem.save(newItem, function (err, doc) {
+            console.log(doc);
+            res.status(200);
+            res.send(JSON.stringify({}));
+        });
+    });
+    app.get('/list', function (req, res) {
+        var query = Items.find();
+        query.exec(function (err, docs) {
+            res.status(200);
+            res.send(JSON.stringify({docs}));
+        });
+    });
+    app.use('/', express.static('./'));
+    app.listen(8080, function () {
+        console.log("Application is Running!");
+    });
+});

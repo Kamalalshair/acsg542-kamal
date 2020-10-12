@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd00a1a7-efdd-43d6-a432-9ee90dbc243a" name="Default Changelist" comment="Conversion from raw Mongo to Mongoose">
+    <list default="true" id="cd00a1a7-efdd-43d6-a432-9ee90dbc243a" name="Default Changelist" comment="Updated with Week 6 Solutions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema_file.js" beforeDir="false" afterPath="$PROJECT_DIR$/schema_file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/services.js" afterDir="false" />
     </list>
@@ -39,6 +40,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="JsFlowSettings">
@@ -71,6 +77,16 @@
       <recent name="C:\Users\ryo36\Desktop\542 Homework\H6" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.server.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -86,7 +102,7 @@
       <workItem from="1602124538466" duration="273000" />
       <workItem from="1602459881410" duration="18000" />
       <workItem from="1602460306152" duration="42000" />
-      <workItem from="1602460409260" duration="2277000" />
+      <workItem from="1602460409260" duration="7808000" />
     </task>
     <task id="LOCAL-00001" summary="H6 initial Commit">
       <created>1602122725614</created>
@@ -102,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602124600519</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated with Week 6 Solutions">
+      <created>1602464955840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602464955840</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,21 +146,42 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="H6 initial Commit" />
     <MESSAGE value="Conversion from raw Mongo to Mongoose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conversion from raw Mongo to Mongoose" />
+    <MESSAGE value="Updated with Week 6 Solutions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated with Week 6 Solutions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1602459896855">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602459896855" />
+    <state width="629" height="163" key="GridCell.Tab.0.bottom" timestamp="1602469925996">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="629" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1602469925996" />
+    <state width="629" height="163" key="GridCell.Tab.0.center" timestamp="1602469925995">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="629" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1602469925995" />
+    <state width="629" height="163" key="GridCell.Tab.0.left" timestamp="1602469925994">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="629" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1602469925994" />
+    <state width="629" height="163" key="GridCell.Tab.0.right" timestamp="1602469925996">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="629" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1602469925996" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1602464689116">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602464689116" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1602124604674">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1602465016714">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602124604674" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602465016714" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1602469189236">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1602469189236" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602460979918">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

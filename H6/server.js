@@ -2,13 +2,14 @@ var fs = require('fs');
 var http = require('http');
 var url = require('url');
 var mongoose = require('mongoose');
-var schema = require('./schema_file.js');
+var schema = require('./schema_file.js').todoSchema;
 
-var ROOT_DIR = "../H5";
+var ROOT_DIR = "./";
 var dbUrl = "mongodb://localhost/mydb";
 var db = mongoose.connect(dbUrl);
+var Items = mongoose.model("Items", schema);
 
-mongoose.connection.once('open', {useUnifiedTopology: true},function () {
+mongoose.connection.once('open', {useUnifiedTopology: true}, function () {
     http.createServer(function (req, res) {
         if (req.method === "POST") {
             var jsonData = "";
@@ -17,32 +18,31 @@ mongoose.connection.once('open', {useUnifiedTopology: true},function () {
             });
             req.on('end', function () {
                 var reqObj = JSON.parse(jsonData);
-                var myDB = db.db("mydb");
-                myDB.createCollection("data", myDB);
-                myDB.collection("data").insertOne(reqObj, function (err, res){
-                    if (err) throw err;
-                    console.log("Successful Insertion of: " + reqObj);
+                var newItem = new Items({
+                    item: reqObj
                 });
-                console.log(reqObj);
+
+                newItem.save(function (err, doc) {
+                    console.log(doc);
+                });
+
                 res.writeHead(200);
                 res.end(JSON.stringify({}));
             });
-        } else {
-            var urlObj = url.parse(req.url, true, false);
-            fs.readFile(ROOT_DIR + urlObj.pathname, function (err, data) {
-                if (err) {
-                    res.writeHead(404);
-                    res.end(JSON.stringify(err));
-                    return;
-                }
-                else {
-                    res.writeHead(200);
-                    res.end(JSON.stringify("Success!"));
-                    return;
-                }
+        } else if (req.method === "POST" && req.url === "/list") {
+            var query = Items.find();
+            query.exec(function (err, docs) {
+                res.writeHead(200);
+                res.end(JSON.stringify({docs}));
             });
-        }
+        } else {
+            var urlObj = url.parse(request.url, true, false);
+            fs.readFile(ROOT_DIR + urlObj.pathname, function (err, data) {
+                response.writeHead(200);
+                response.end(data);
+            });
 
+        }
     }).listen(8080);
     db.close();
 })

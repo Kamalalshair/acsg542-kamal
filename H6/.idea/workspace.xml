@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cd00a1a7-efdd-43d6-a432-9ee90dbc243a" name="Default Changelist" comment="Conversion from raw Mongo to Mongoose">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema_file.js" beforeDir="false" afterPath="$PROJECT_DIR$/schema_file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/services.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +41,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1iZkWVUznm9kok9USW1WNby9bZn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,9 +61,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.64" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../H5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -75,6 +85,8 @@
       <workItem from="1602122534933" duration="1438000" />
       <workItem from="1602124538466" duration="273000" />
       <workItem from="1602459881410" duration="18000" />
+      <workItem from="1602460306152" duration="42000" />
+      <workItem from="1602460409260" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="H6 initial Commit">
       <created>1602122725614</created>
@@ -118,13 +130,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602459896855" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1602122659138">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602464689116">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602122659138" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602464689116" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1602124604674">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1602124604674" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602460979918">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602460979918" />
   </component>
 </project>
